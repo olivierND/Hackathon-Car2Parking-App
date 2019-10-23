@@ -1,0 +1,22 @@
+<div id="landing-page-container">
+    <div *ngIf="hourglass" class="hourglass" id="hourglass-container"></div>
+    <div *ngIf="!hourglass">
+        <h1 class="title pulsate">Quick, choose your parking!</h1>
+        <div id="map-container">
+            <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
+                <agm-marker *ngFor="let pos of positions | keyvalue" (markerClick)="onMarkerClick(pos.key, pos.value)"
+                    [latitude]="pos.value[0]" [longitude]="pos.value[1]" [iconUrl]="positionReservation.has(pos.key) ? 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0' : 'https://storage.googleapis.com/support-kms-prod/SNP_2752129_en_v0'">
+                </agm-marker>
+            </agm-map>
+        </div>
+    </div>
+
+    <app-reservation-parking *ngIf="!hourglass" id="reservation-container" [parkingID]="noUniqueParking"
+        [parkingStreet]="parkingStreet"></app-reservation-parking>
+
+    <div *ngIf="!hourglass">
+        <div id="pub-container">
+            <a href="https://www.spotify.com/ca-en/"><img src="./../../assets/web-ad-spotify.gif" id="pub-img" alt="Loading" title="Loading"/></a>
+        </div>
+    </div>
+</div>

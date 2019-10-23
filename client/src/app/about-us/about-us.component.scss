@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+.aboutUsImage {
+    width:100%;
+}
+
+.top-left {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Poiret One', cursive;
+}
+
+.paragraph {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: white;
+    font-weight: bold;
+    font-family: 'Poiret One';
+}
+
+.divider {
+    margin-top:3%;
+    color: white;
+}

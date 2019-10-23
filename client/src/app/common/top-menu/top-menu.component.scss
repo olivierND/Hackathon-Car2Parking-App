@@ -1,0 +1,59 @@
+@import './../../variables.scss';
+
+.top-menu {
+    height: $top-menu-height;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: $color-main;
+    justify-content: center;
+    font-family: 'Marker Felt', fantasy;
+    align-items: center;
+}
+
+.top-menu #toolbar .title {
+    color: #b3cde0;
+    cursor: pointer;
+    line-height: $top-menu-height;
+    align-items: center;
+}
+
+.top-menu #toolbar .title-tweak {
+    color: #FFFFFF;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.maindiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+mat-card {
+    background-color: $color-main;
+    color: #b3cde0;
+}
+
+.leftContainer{
+    margin-top:15%;
+    max-width: 50%;
+    border-radius:5px;
+}
+
+.rightContainer{
+    margin-top:15%;
+    max-width: 50%;
+    border-radius:5px;
+}
+
+.homeHeader {
+    font-size:40px;
+}
+
+.aboutUs {
+    float:right;
+    font-style: italic;
+    &:hover{color:white;}
+}

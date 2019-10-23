@@ -1,0 +1,80 @@
+@import './../variables.scss';
+
+
+
+#form-container {
+    font-family: Calibri, sans-serif;
+    padding: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+
+    form {
+        display: inline-block;
+        width: 60%;
+        @media screen and (max-width: 600px) {
+            width: 85%;
+        }
+        background-color: rgba(128, 128, 128, 0.05);
+        border-radius: $border-radius-form;
+        padding: 15px;
+        
+        .form-group {
+            display: block;
+            text-align: center;
+
+            .titre-label {
+                display: block;
+                margin-top: 15px;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            .form-control {
+                display: block;
+                width: 300px;
+                @media screen and (max-width: 600px) {
+                    width: 85%;
+                }
+                margin-top: 5px;
+                margin: auto;
+                border-width: 1px;
+                border-radius: $border-radius-form;
+                border-color: rgba(0, 0, 0, 0.25);
+
+                font-size: 16px;
+
+                .checkbox-input {
+                    margin: 0 5px;
+                }
+            }
+            
+            .is-invalid {
+                border-width: 1px;
+                border-color: red;
+                border-radius: $border-radius-form;
+                left: 0px;
+            }
+            
+            .register-button {
+                float: center;
+                margin-top: 25px;
+                border-radius: $border-radius-form;
+                border-width: 0px;
+                font-size: 16px;
+                padding: 10px 25px;
+                background-color: rgba(105, 112, 206, 0.3);
+                
+                &:hover {
+                    background-color: rgba(105, 112, 206, 0.6);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.invalid-field {
+    color: red;
+}

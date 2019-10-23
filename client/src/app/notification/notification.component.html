@@ -1,0 +1,16 @@
+<h1 mat-dialog-title class="outline"> {{ message }} </h1>
+<h1 *ngIf="isNotifOver" mat-dialog-title class="outline"> {{ message2 }} </h1>
+<div mat-dialog-content>
+  <select *ngIf="isNotifOver" class="form-control" [(ngModel)]="time">
+  <option value="15">15 minutes</option>
+  <option value="30">30 minutes</option>
+  <option value="45">45 minutes</option>
+  <option value="60">60 minutes</option>
+  <option value="75">75 minutes</option>
+  <option value="90">90 minutes</option>
+  <option value="105">105 minutes</option>
+  <option value="120">120 minutes</option>
+</select>
+<button *ngIf="isNotifOver" mat-button (click)='fermerDialog()' class='dialogButtons mat-elevation-z6'> Cancel </button>
+<button mat-button (click)='renewParking()' class='dialogButtons mat-elevation-z6'> {{buttonMessage}} </button>
+</div>

@@ -1,0 +1,90 @@
+@import './../variables.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+#landing-page-container {
+    height: calc(100% - #{$top-menu-height});
+    width: 100%;
+    overflow: scroll;
+    color: #7b96aa;
+
+    .title {
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    .pulsate {
+        -webkit-animation: pulsate 3s ease-out;
+        -webkit-animation-iteration-count: infinite;
+        opacity: 0.5;
+    }
+    @-webkit-keyframes pulsate {
+        0% {
+            opacity: 0.75;
+        }
+        50% {
+            opacity: 1.0;
+        }
+        100% {
+            opacity: 0.75;
+        }
+    }
+
+    .hourglass {
+        width: 200px;
+        height: 200px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 200px;
+        margin-bottom: auto;
+        transition: .5s ease-in-out;
+        animation: loaderAnim 1s infinite;
+        background:
+            conic-gradient(
+                from 90deg,
+                transparent 12.5%, #b3cde0 12.5%,
+                #7367F0 37.5%, transparent 37.5%,
+                transparent 62.5%, #7367F0 62.5%,
+                #b3cde0 87.5%, transparent 87.5%
+            )
+            50% 50% / 32% 50%
+            no-repeat;
+
+    }
+    @keyframes loaderAnim{
+        0%{
+            transform: rotate(0);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+
+    #map-container {
+        height: 60%;
+        width: 100%;
+        text-align: center;
+        margin-top: 3%;
+        padding: 0;
+
+        agm-map {
+            height: 450px;
+            width: 75vw;
+            margin: 0 auto;
+            display: inline-block;
+        }
+    }
+
+    #pub-container {
+        margin-left: 30%;
+        height: 50%;
+        width: 40%;
+
+        #pub-img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+$sidenav-width: 330px;
+$sidenav-height: 100%;
+$top-menu-height: 55px;
+$top-menu-width: 100%;
+
+$border-radius: 2px;
+$border-radius-form: 5px;
+
+$color-main: #03396c;
+$white: #fff;
+$black: rgb(0, 0, 0);
+
+
+// From http://google.github.io/material-design-icons/ .
+@mixin material-icons() {
+    font-family: 'Material Icons';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    cursor: default;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
